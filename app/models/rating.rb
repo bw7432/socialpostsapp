@@ -1,5 +1,5 @@
-class Post < ApplicationRecord
-  belongs_to :user, optional: true
+class Rating < ApplicationRecord
+  belongs_to :user
   after_save :log_event
 
 

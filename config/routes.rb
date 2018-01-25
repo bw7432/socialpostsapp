@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   namespace :v1 do
     resources :posts
+    resources :ratings
+    resources :comments
   end
   mount_devise_token_auth_for 'User', at: 'auth'
   apipie
