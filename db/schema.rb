@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20180125211229) do
 
   create_table "user_events", force: :cascade do |t|
     t.string "description"
+    t.integer "type_of"
     t.string "eventable_type"
     t.bigint "eventable_id"
     t.bigint "user_id"
