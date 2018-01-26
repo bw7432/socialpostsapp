@@ -18,6 +18,7 @@ gem 'rack-cors'
 gem 'will_paginate', '~> 3.1.0'
 gem "roo", "~> 2.7.0"
 gem 'apipie-rails'
+gem 'httparty'
 
 group :development, :test do
   gem 'byebug'

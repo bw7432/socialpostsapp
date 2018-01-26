@@ -1,7 +1,7 @@
 class V1::PostsController < ApplicationController
   before_action :set_post, only: [:show, :update, :destroy]
 
-  def_param_group :post do
+  def_param_group :posts do
     param :post, Hash, :action_aware => true do
       param :title, String, :required => true
       param :body, String, :required => true
@@ -11,7 +11,7 @@ class V1::PostsController < ApplicationController
   # GET /posts
   api :GET, "/v1/posts", "List posts"
   def index
-    @posts = Post.all
+    @posts = Post.paginate(:page => params[:page], :per_page => 25)
 
     render json: @posts
   end
@@ -20,7 +20,7 @@ class V1::PostsController < ApplicationController
   api :GET, '/v1/posts/:id', 'Show a post'
   param :id, :number
   def show
-    render json: @post
+    render json: @post, include: 'comments'
   end
 
   # POST /posts
