@@ -2,7 +2,7 @@ class Comment < ApplicationRecord
   belongs_to :post, optional: true
   belongs_to :user, optional: true
   has_one :event, as: :eventable
-  before_save :log_event
+  before_create :log_event
 
 
   def log_event

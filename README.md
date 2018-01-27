@@ -1,24 +1,48 @@
-# README
+# Project Title
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+One Paragraph of project description goes here
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-* System dependencies
+### Prerequisites
 
-* Configuration
+What things you need to install the software and how to install them
 
-* Database creation
+```
+Give examples
+```
 
-* Database initialization
+### Installing
 
-* How to run the test suite
+Clone the repository, run bundle and follow the steps below to get things up and running.
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+edit database.yml with your credentials
+```
 
-* Deployment instructions
+```
+rails db:create
+```
 
-* ...
+```
+rails db:migrate
+```
+
+```
+rails db:seed
+```
+
+## Running the tests
+
+run 'rspec'
+
+
+## Authors
+
+* **Ben WArren** [https://github.com/bw7432](https://github.com/bw7432)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details

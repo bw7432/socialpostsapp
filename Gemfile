@@ -24,6 +24,8 @@ group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.7'
   gem 'factory_bot'
+  gem 'guard-rspec', require: false
+  gem 'database_cleaner'
 end
 
 group :development do

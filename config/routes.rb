@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   namespace :v1 do
-    get 'feed' => 'feeds#feed'
+    get 'users/vote'
+  end
+
+  namespace :v1 do
+    get 'user_events/:id' => 'events#user_events'
+    resources :users
+    resources :events
     resources :posts
     resources :ratings
     resources :comments

@@ -14,10 +14,6 @@ class LogModelActionService
         this_event.description = "Commented on a post by #{post_author}"
         this_event.type_of = "comment"
         this_event.user_id = record.user_id
-      when "rating"
-        this_event.description = "Surpassed 4 Stars!"
-        this_event.type_of = "rating"
-        this_event.user_id = record.id
     end
     this_event.eventable_id = record.id
     this_event.eventable_type = record.class.name
