@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  namespace :v1 do
-    get 'users/vote'
-  end
 
   namespace :v1 do
     get 'user_events/:id' => 'events#user_events'

@@ -30,7 +30,10 @@ rake load_github_events
 
 run 'rspec'
 
-
+## Documentation for routes
+```
+/apipie
+```
 ## Authors
 
 * **Ben WArren** [https://github.com/bw7432](https://github.com/bw7432)

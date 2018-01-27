@@ -9,7 +9,7 @@ class V1::PostsController < ApplicationController
   end
 
   # GET /posts
-  api :GET, "/v1/posts", "List posts"
+  api :GET, "v1/posts", "List posts"
   def index
     @posts = Post.paginate(:page => params[:page], :per_page => 25)
 
@@ -17,14 +17,14 @@ class V1::PostsController < ApplicationController
   end
 
   # GET /posts/1
-  api :GET, '/v1/posts/:id', 'Show a post'
+  api :GET, 'v1/posts/:id', 'Show a post'
   param :id, :number
   def show
     render json: @post, include: 'comments'
   end
 
   # POST /posts
-  api :POST, '/v1/posts/', 'Create Post'
+  api :POST, 'v1/posts/', 'Create Post'
   param_group :posts
   def create
     # @post = current_user.posts.build(post_params)
@@ -38,7 +38,7 @@ class V1::PostsController < ApplicationController
   end
 
   # PATCH/PUT /posts/1
-  api :PUT, '/v1/posts/', 'Update Post'
+  api :PATCH, 'v1/posts/', 'Update Post'
   param_group :posts
   def update
     if @post.update(post_params)
@@ -49,7 +49,7 @@ class V1::PostsController < ApplicationController
   end
 
   # DELETE /posts/1
-  api :DELETE, '/v1/posts/:id', 'Destroy post'
+  api :DELETE, 'v1/posts/:id', 'Destroy post'
   param :id, :number
   def destroy
     @post.destroy

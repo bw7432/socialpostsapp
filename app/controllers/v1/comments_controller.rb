@@ -2,18 +2,20 @@ class V1::CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :update, :destroy]
 
   # GET /comments
+  api :GET, 'v1/comments', 'Show events for a specific user, 25 per page'
   def index
     @comments = Comment.all
 
     render json: @comments
   end
 
-  # GET /comments/1
+  api :GET, 'v1/comments/:id', 'Show a specific comment'
+  param :id, :number
   def show
     render json: @comment
   end
 
-  # POST /comments
+  api :POST, 'v1/comments', 'create a comment'
   def create
     @comment = Comment.new(comment_params)
 
@@ -24,7 +26,8 @@ class V1::CommentsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /comments/1
+  api :PATCH, 'v1/comments/:id', 'Update a comment'
+  param :id, :number
   def update
     if @comment.update(comment_params)
       render json: @comment
@@ -33,7 +36,8 @@ class V1::CommentsController < ApplicationController
     end
   end
 
-  # DELETE /comments/1
+  api :DELETE, 'v1/comments', 'Delete a comment'
+  param :id, :number
   def destroy
     @comment.destroy
   end
