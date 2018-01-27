@@ -1,18 +1,6 @@
-# Project Title
+# SocialPostsApp
 
-One Paragraph of project description goes here
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+This is a rails 5 api only social posts app
 
 ### Installing
 
@@ -32,6 +20,10 @@ rails db:migrate
 
 ```
 rails db:seed
+```
+Run this starting out, then set up some kind of recurring job to run this as often as you would like.
+```
+rake load_github_events
 ```
 
 ## Running the tests

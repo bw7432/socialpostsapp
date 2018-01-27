@@ -10,8 +10,4 @@ class GithubEventsService
   def events_performed(username)
     self.class.get("/users/#{username}/events", @options)
   end
-  # github = GithubEventsService.new("github", 1)
-  # puts stack_exchange.questions
-  # puts github.events_performed("mojombo")
-  # puts stack_exchange.users
 end
