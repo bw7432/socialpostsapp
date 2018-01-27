@@ -6,9 +6,7 @@ This is a rails 5 api only social posts app
 
 Clone the repository, run bundle and follow the steps below to get things up and running.
 
-```
-edit database.yml with your credentials
-```
+edit 'database.yml' with your credentials
 
 ```
 rails db:create
