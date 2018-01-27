@@ -34,7 +34,7 @@ run 'rspec'
 ```
 ## Authors
 
-* **Ben WArren** [https://github.com/bw7432](https://github.com/bw7432)
+* **Ben Warren** [https://github.com/bw7432](https://github.com/bw7432)
 
 ## License
 
