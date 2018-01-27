@@ -2,6 +2,7 @@ class V1::RatingsController < ApplicationController
   before_action :set_rating, only: [:show, :update, :destroy]
 
   # GET /ratings
+  api :GET, "v1/ratings", "List ratings"
   def index
     @ratings = Rating.all
 
@@ -9,11 +10,13 @@ class V1::RatingsController < ApplicationController
   end
 
   # GET /ratings/1
+  api :GET, "v1/ratings/:id", "Show a rating"
   def show
     render json: @rating
   end
 
   # POST /ratings
+  api :POST, "v1/ratings", "Create a rating"
   def create
     @rating = Rating.new(rating_params)
 
@@ -25,6 +28,7 @@ class V1::RatingsController < ApplicationController
   end
 
   # PATCH/PUT /ratings/1
+  api :PATCH, "v1/ratings/:id", "Update a Rating"
   def update
     if @rating.update(rating_params)
       render json: @rating
@@ -34,6 +38,7 @@ class V1::RatingsController < ApplicationController
   end
 
   # DELETE /ratings/1
+  api :DELETE, "v1/ratings/:id", "Delete a rating"
   def destroy
     @rating.destroy
   end
