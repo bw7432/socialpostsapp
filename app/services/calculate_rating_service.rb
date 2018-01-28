@@ -11,7 +11,7 @@ class CalculateRatingService
         this_event.user_id = record.user_id
         this_event.eventable_id = record.id
         this_event.eventable_type = record.class.name
-        this_event.posted_at = record.created_at
+        this_event.created_at = record.created_at
         this_event.save
       end
     end

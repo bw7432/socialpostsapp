@@ -28,7 +28,7 @@ class SaveGithubEventsService
     if save
       this_event.eventable_id = user.id
       this_event.eventable_type = user.class.name
-      this_event.posted_at = Date.strptime(event['created_at'])
+      this_event.created_at = Date.strptime(event['created_at'])
       this_event.user_id = user.id
       this_event.github_event_id = event['id']
       this_event.type_of = "github"
