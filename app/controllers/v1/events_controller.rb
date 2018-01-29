@@ -14,7 +14,7 @@ class V1::EventsController < ApplicationController
     render json: @events
   end
 
-  api :GET, 'v1/events/:id', "Show event - includes its associated record. Use 'type_of' to select template."
+  api :GET, 'v1/events/:id', "Show event - includes its associated record, and the user to whom the event belongs. Use 'type_of' to select template."
   param :id, :number
   def show
     render json: @event, include: ['eventable', 'user']

@@ -25,7 +25,6 @@ posts_header = posts_spreadsheet.row(1)
   post.title = row["title"]
   post.body = row["body"]
   post.user_id = row["user_id"]
-  post.posted_at = row["posted_at"]
   post.created_at = row["posted_at"]
   post.updated_at = row["updated_at"]
   post.save
@@ -41,7 +40,6 @@ comments_header = comments_spreadsheet.row(1)
   comment.message = row["message"]
   comment.user_id = row["user_id"]
   comment.post_id = row["post_id"]
-  comment.commented_at = row["commented_at"]
   comment.created_at = row["commented_at"]
   comment.updated_at = row["updated_at"]
   comment.save
@@ -57,7 +55,6 @@ ratings_header = ratings_spreadsheet.row(1)
   rating.user_id = row["user_id"]
   rating.rater_id = row["rater_id"]
   rating.rating = row["rating"]
-  rating.rated_at = row["rated_at"]
   rating.created_at = row["rated_at"]
   rating.updated_at = row["updated_at"]
   rating.save
