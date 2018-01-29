@@ -2,7 +2,7 @@ class V1::RatingsController < ApplicationController
   before_action :set_rating, only: [:show, :update, :destroy]
 
   # POST /ratings
-  api :POST, "v1/ratings", "Create a rating"
+  api :POST, "v1/ratings", "Create a rating, a user can only rate another user once."
   def create
     if !Rating.exists?(user_id: rating_params[:user_id], rater_id: rating_params[:rater_id])
       @rating = Rating.new(rating_params)
