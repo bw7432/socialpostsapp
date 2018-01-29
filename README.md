@@ -26,6 +26,10 @@ rake load_github_events
 
 ## Running the tests
 ```
+rails db:migrate RAILS_ENV=test
+```
+
+```
 rspec
 ```
 or
