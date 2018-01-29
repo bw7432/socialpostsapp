@@ -25,13 +25,21 @@ rake load_github_events
 ```
 
 ## Running the tests
-
-run 'rspec'
-
+```
+rspec
+```
+or
+```
+bundle exec guard
+```
 ## Documentation for routes
 ```
 /apipie
 ```
+
+## To do
+Developers in the future could build the feed on the front end using saved words from 'use_words' array field in Event model. They will also need to secure everything (make sure a user cannot create a post for another user, etc.) and implement devise before actions for authentication.
+
 ## Authors
 
 * **Ben Warren** [https://github.com/bw7432](https://github.com/bw7432)
