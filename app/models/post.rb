@@ -4,6 +4,9 @@ class Post < ApplicationRecord
   has_many :comments
   before_create :log_event
 
+  validates :title, presence: true
+  validates :body, presence: true
+
 
   def log_event
     # log event here

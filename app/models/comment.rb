@@ -4,6 +4,8 @@ class Comment < ApplicationRecord
   has_one :event, as: :eventable
   before_create :log_event
 
+  validates :message, presence: true
+
 
   def log_event
     # log event here

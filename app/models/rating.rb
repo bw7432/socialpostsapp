@@ -4,6 +4,10 @@ class Rating < ApplicationRecord
   # before_create :log_event
   after_save :calculate_rating
 
+  validates :user_id, presence: true
+  validates :rater_id, presence: true
+  validates :rating, presence: true
+
 
   # def log_event
   #   # log event here
